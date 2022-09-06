@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins !important;
+    margin: 0;
+    height: 100%;
+    user-select: none;
+}
+#nav{
+    display: flex;
+    height: 70px;
+    background: #607EAA 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 30px #7B7B7B29;
+    align-items: center;
+    opacity: 1;
+}
+#nav h1{
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffff;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+#Heading_div p{
+    display: inline-block;
+}
+.black{
+    color: #000000;
+
+}
+#container{
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    background-color: #F9F5EB;
+}
+
+#btnContainer{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    align-items: center;
+    padding-top: 35px;
+    margin-left: 8%;
+    margin-right: 8%;
+    
+}
+.round-blue-btn{
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 100%;
+    color: #ffffff;
+    background: #1C3879 0% 0% no-repeat padding-box;
+}
+.round-blue-btn:hover{
+    cursor: pointer;
+}
+#cardContainer{
+    background: transparent;
+    padding-top: 35px;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+#NoTasks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(190, 190, 190);
+}
+
+.floatingContainer{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    top:0;
+}
+
+#newTaskContainer{
+    visibility: hidden;
+}
+#newItemContainer{
+    visibility: hidden;
+}
+
+.input{
+    position: relative;
+    width: 500px;
+    height: 250px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #67676729;
+    border: 1px solid #EDEDED;
+    border-radius: 10px;
+    opacity: 2;
+    border: #607EAA solid 3px;
+}
+
+.input p{
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #858585;
+    color: black;
+    margin-left: 5px;
+    margin-right: 9px;
+}
+i:hover{
+    color: #0b2f84;
+    cursor: pointer;
+}
+
+.closeInput{
+    color: #858585;
+    align-self: right;
+}
+
+.inputBox{
+    height:40px;
+}
+
+.input div{
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+
+}
+.rec-button{
+    
+    margin-left: 60%;
+    margin-top:15px;
+    font-size: 17px;
+    width: 160px;
+    height: 40px;
+    color: #ffffff;
+    background: #0b2f84 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+}
+
+.cards{
+    min-width: 350px;
+    min-height:360px;
+    height: auto;
+    margin: 30px 15px 30px 15px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 20px 20px 50px grey;
+}
+.cards p{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #858585;
+    color: #0b2f84;
+    margin-left: 5px;
+    margin-right: 9px;
+}
+.cards p:hover{
+    cursor: pointer;
+}
+
+
+.inputCheckBoxes{
+    display:block;
+    flex-direction: row;
+    padding:15px;
+    padding-left: 35px;
+    font-size: 20px;
+}
+.inputCheckBoxes input{
+    font-family: Poppins;
+    background-color: #F7F7F7;
+    margin-right: 10px;
+}
+.cardHeading{
+    text-align: center;
+}
+
+.checkbox_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox_container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox_container input:checked ~ .checkmark {
+    background-color: #808080;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox_container .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+ 
+  
